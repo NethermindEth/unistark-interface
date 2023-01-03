@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nethermindeth/hardhat-warp": "^1.1.5",
+    "@shardlabs/starknet-hardhat-plugin": "^0.7.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.8",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^4.0.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -21,10 +27,14 @@
     "clsx": "^1.2.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
+    "hardhat": "^2.12.3",
+    "hardhat-typechain": "^0.3.5",
+    "hardhat-warp": "link:../hardhat-warp",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rebass": "^4.0.7",
+    "typechain": "^4.0.0",
     "typescript": "4.9.3"
   },
   "resolutions": {
@@ -34,6 +44,7 @@
     "@types/rebass": "^4.0.10",
     "@vanilla-extract/babel-plugin": "^1.2.0",
     "@vanilla-extract/next-plugin": "^2.1.1",
-    "@vanilla-extract/webpack-plugin": "^2.2.0"
+    "@vanilla-extract/webpack-plugin": "^2.2.0",
+    "ts-node": "^10.9.1"
   }
 }
