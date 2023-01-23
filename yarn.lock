@@ -1320,6 +1320,14 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
+"@starknet-react/core@^0.14.8":
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/@starknet-react/core/-/core-0.14.8.tgz#3e063e3d3d2832d76de44eda85b2879e93d069e0"
+  integrity sha512-PouT9Njd2Um+rbuh3thg+YGalR30uen2D9cnJsayQ+UbPwXs0W2Y1n0Kp/pSxi0z+D7wGXO8Vu3pi7jU5ZLjVg==
+  dependencies:
+    "@tanstack/react-query" "^4.3.4"
+    immutable "^4.0.0"
+
 "@styled-system/background@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@styled-system/background/-/background-5.1.2.tgz#75c63d06b497ab372b70186c0bf608d62847a2ba"
@@ -1439,6 +1447,19 @@
   integrity sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==
   dependencies:
     defer-to-connect "^2.0.1"
+
+"@tanstack/query-core@4.22.0":
+  version "4.22.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.22.0.tgz#7a786fcea64e229ed5d4308093dd644cdfaa895e"
+  integrity sha512-OeLyBKBQoT265f5G9biReijeP8mBxNFwY7ZUu1dKL+YzqpG5q5z7J/N1eT8aWyKuhyDTiUHuKm5l+oIVzbtrjw==
+
+"@tanstack/react-query@^4.3.4":
+  version "4.22.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.22.0.tgz#aaa4b41a6d306be6958018c74a8a3bb3e9f1924c"
+  integrity sha512-P9o+HjG42uB/xHR6dMsJaPhtZydSe4v0xdG5G/cEj1oHZAXelMlm67/rYJNQGKgBamKElKogj+HYGF+NY2yHYg==
+  dependencies:
+    "@tanstack/query-core" "4.22.0"
+    use-sync-external-store "^1.2.0"
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
@@ -4494,6 +4515,11 @@ ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
+immutable@^4.0.0:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.2.tgz#2da9ff4384a4330c36d4d1bc88e90f9e0b0ccd16"
+  integrity sha512-fTMKDwtbvO5tldky9QZ2fMX7slR0mYpY5nbnFWYp0fOzDhHqhgIw9KoYgxLWsoNTS9ZHGauHj18DTyEw6BK3Og==
+
 immutable@^4.0.0-rc.12:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.1.0.tgz#f795787f0db780183307b9eb2091fcac1f6fafef"
@@ -7044,7 +7070,7 @@ url-set-query@^1.0.0:
   resolved "https://registry.yarnpkg.com/url-set-query/-/url-set-query-1.0.0.tgz#016e8cfd7c20ee05cafe7795e892bd0702faa339"
   integrity sha512-3AChu4NiXquPfeckE5R5cGdiHCMWJx1dwCWOmWIL4KHAziJNOFIYJlpGFeKDvwLPHovZRCxK3cYlwzqI9Vp+Gg==
 
-use-sync-external-store@1.2.0:
+use-sync-external-store@1.2.0, use-sync-external-store@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
   integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
