@@ -6,9 +6,18 @@ import {
   useConnectors,
   useAccount,
   useStarknetExecute,
-  useContractFactory,
-  useDeploy,
+  useStarknetCall,
+  useContract,
 } from "@starknet-react/core";
+import { encodeInputs, decodeOutputs } from "@nethermindeth/warp";
+import {
+  Abi,
+  AccountInterface,
+  CompiledContract,
+  Contract,
+  ContractFactory,
+} from "starknet";
+
 import { toCairoUint256 } from "../utils/helpers";
 
 export const PageWrapper = styled.div`
@@ -25,43 +34,80 @@ export const PageWrapper = styled.div`
 
 //   return contract;
 // }
-const eg = "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7";
+const contract_address =
+  "0x0725c1a56579ba13fbbfd0b3bcd43eb3fd4342ce0dc838ae21adbb93117275a0";
 
 export default function Home() {
   const { connect, available } = useConnectors();
   const { account, address, status } = useAccount();
 
+  const { contract } = useContract({
+    address: contract_address,
+    abi: TestAbi as Abi,
+  });
+
   const calls = useMemo(() => {
-    const tx = {
-      contractAddress: eg,
-      entrypoint: "getPath_d88e3e3b",
-      calldata: [eg, eg],
-    };
+    // const tx = {
+    //   contractAddress: contract_address,
+    //   entrypoint: "getPath_d88e3e3b",
+    //   calldata: [contract_address, contract_address],
+    // };
 
     const tx2 = {
-      contractAddress: eg,
+      contractAddress: contract_address,
       entrypoint: "swapTokenForToken_22894614",
-      calldata: [eg, eg, toCairoUint256(200), eg, toCairoUint256(20)],
+      calldata: [
+        contract_address,
+        contract_address,
+        ...toCairoUint256(200),
+        contract_address,
+        ...toCairoUint256(20),
+      ],
     };
-    return [tx, tx2];
+    return [tx2];
   }, []);
 
-  const { execute } = useStarknetExecute({ calls });
-
-  const { contractFactory } = useContractFactory({
-    compiledContract: TestCompiled, //eslint-disable-line no-console ts-ignore
-    providerOrAccount: account,
+  const { data, loading, error, refresh } = useStarknetCall({
+    contract,
+    method: "getPath_d88e3e3b",
+    args: [contract_address, contract_address],
+    options: {
+      watch: false,
+    },
   });
 
-  console.log(contractFactory);
+  const {
+    data: dataEx,
+    loading: loadEx,
+    error: errEx,
+    execute,
+  } = useStarknetExecute({ calls });
 
-  const constructorCalldata = useMemo(() => [], [address]);
+  console.log(
+    data?.map((i) => i.toString()),
+    loading,
+    error,
+    dataEx,
+    loadEx,
+    errEx,
+    toCairoUint256(200)
+  );
 
-  const { deploy, error } = useDeploy({
-    contractFactory,
-    constructorCalldata,
-  });
-  console.log({ deploy });
+  // const { contractFactory } = useContractFactory({
+  //   compiledContract: TestCompiled as CompiledContract,
+  //   account: account as AccountInterface,
+  //   classHash: "",
+  // });
+
+  // console.log(contractFactory, TestCompiled);
+
+  // const constructorCalldata = useMemo(() => [], []);
+
+  // const { deploy, error } = useDeploy({
+  //   contractFactory,
+  //   constructorCalldata,
+  // });
+  // console.log({ deploy });
 
   return (
     <PageWrapper>
@@ -82,7 +128,7 @@ export default function Home() {
       </p>
 
       <p>
-        <button onClick={() => deploy()}>Deploy</button>
+        <button onClick={() => refresh()}>Call</button>
       </p>
     </PageWrapper>
   );
