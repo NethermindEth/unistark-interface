@@ -1,0 +1,185 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "__warp_usrid_18_owner",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_19_spender",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_20_value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Approval_8c5be1e5",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "__warp_usrid_15_from",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_16_to",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_17_value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Transfer_ddf252ad",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_06_recipient",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_07_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "transfer_a9059cbb",
+        "outputs": [
+            {
+                "name": "__warp_usrid_08_",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_11_spender",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_12_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "approve_095ea7b3",
+        "outputs": [
+            {
+                "name": "__warp_usrid_13_",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_14_sender",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_15_recipient",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_16_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "transferFrom_23b872dd",
+        "outputs": [
+            {
+                "name": "__warp_usrid_17_",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_21__i0",
+                "type": "felt"
+            }
+        ],
+        "name": "balanceOf_70a08231",
+        "outputs": [
+            {
+                "name": "__warp_usrid_22_",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_23__i0",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_24__i1",
+                "type": "felt"
+            }
+        ],
+        "name": "allowance_dd62ed3e",
+        "outputs": [
+            {
+                "name": "__warp_usrid_25_",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_02_amountToMint",
+                "type": "Uint256"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_03_to",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_04_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "mint_40c10f19",
+        "outputs": [],
+        "type": "function"
+    }
+]
