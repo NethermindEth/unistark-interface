@@ -9,11 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nethermindeth/hardhat-warp": "^1.1.5",
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-etherscan": "^2.1.8",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@shardlabs/starknet-hardhat-plugin": "^0.7.1",
+    "@ant-design/icons": "^5.0.1",
+    "@nethermindeth/warp": "^2.4.6",
     "@starknet-react/core": "^0.14.8",
     "@typechain/ethers-v5": "^4.0.0",
     "@types/node": "18.11.9",
@@ -24,8 +21,10 @@
     "@vanilla-extract/css-utils": "^0.1.3",
     "@vanilla-extract/dynamic": "^2.0.3",
     "@vanilla-extract/sprinkles": "^1.5.1",
+    "antd": "^5.1.6",
     "babel-plugin-styled-components": "^2.0.7",
     "clsx": "^1.2.1",
+    "console": "^0.7.2",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "hardhat": "^2.12.3",
@@ -34,18 +33,27 @@
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "readline": "^1.3.0",
     "rebass": "^4.0.7",
+    "solc-typed-ast": "^11.0.2",
+    "starknet": "^4.17.1",
     "typechain": "^4.0.0",
     "typescript": "4.9.3"
   },
   "resolutions": {
     "styled-components": "^5"
   },
+  "browser": {
+    "child_process": false
+  },
   "devDependencies": {
     "@types/rebass": "^4.0.10",
     "@vanilla-extract/babel-plugin": "^1.2.0",
     "@vanilla-extract/next-plugin": "^2.1.1",
     "@vanilla-extract/webpack-plugin": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1"
   }
 }
