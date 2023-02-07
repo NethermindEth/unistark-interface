@@ -1,7 +1,8 @@
 {
-	"presets": ["next/babel"],
-	"plugins": [
-		["styled-components", { "ssr": true, "displayName": true }],
-		"@vanilla-extract/babel-plugin"
-	]
+  "presets": ["next/babel"],
+  "plugins": [
+    "macros",
+    ["styled-components", { "ssr": true, "displayName": true }],
+    "@vanilla-extract/babel-plugin"
+  ]
 }

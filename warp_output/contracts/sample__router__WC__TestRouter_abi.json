@@ -1,0 +1,107 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_01__fromToken",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_02__toToken",
+                "type": "felt"
+            }
+        ],
+        "name": "getPath_d88e3e3b",
+        "outputs": [
+            {
+                "name": "__warp_usrid_03__len",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_03_",
+                "type": "felt*"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_05__amount",
+                "type": "Uint256"
+            },
+            {
+                "name": "__warp_usrid_06_route_len",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_06_route",
+                "type": "felt*"
+            }
+        ],
+        "name": "getAmountOut_b8239ebb",
+        "outputs": [
+            {
+                "name": "__warp_usrid_07_",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_08__fromToken",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_09__toToken",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_10__amountIn",
+                "type": "Uint256"
+            },
+            {
+                "name": "__warp_usrid_11__to",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_12__maxSlippage",
+                "type": "Uint256"
+            }
+        ],
+        "name": "swapTokenForToken_22894614",
+        "outputs": [
+            {
+                "name": "__warp_usrid_13_",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    }
+]
