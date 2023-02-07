@@ -44,30 +44,55 @@
     {
         "inputs": [
             {
-                "name": "__warp_usrid_05__fromToken",
-                "type": "felt"
-            },
-            {
-                "name": "__warp_usrid_06__toToken",
-                "type": "felt"
-            },
-            {
-                "name": "__warp_usrid_07__amountIn",
+                "name": "__warp_usrid_05__amount",
                 "type": "Uint256"
             },
             {
-                "name": "__warp_usrid_08__to",
+                "name": "__warp_usrid_06_route_len",
                 "type": "felt"
             },
             {
-                "name": "__warp_usrid_09__maxSlippage",
+                "name": "__warp_usrid_06_route",
+                "type": "felt*"
+            }
+        ],
+        "name": "getAmountOut_b8239ebb",
+        "outputs": [
+            {
+                "name": "__warp_usrid_07_",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "__warp_usrid_08__fromToken",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_09__toToken",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_10__amountIn",
+                "type": "Uint256"
+            },
+            {
+                "name": "__warp_usrid_11__to",
+                "type": "felt"
+            },
+            {
+                "name": "__warp_usrid_12__maxSlippage",
                 "type": "Uint256"
             }
         ],
         "name": "swapTokenForToken_22894614",
         "outputs": [
             {
-                "name": "__warp_usrid_10_",
+                "name": "__warp_usrid_13_",
                 "type": "Uint256"
             }
         ],

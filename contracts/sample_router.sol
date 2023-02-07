@@ -15,11 +15,14 @@ contract TestRouter {
     // Create an empty array to store the route
     address[] memory route = new address[](3);
     route[0]=_fromToken;
-    route[1] = middleToken;
     route[2] = _toToken;
 
     // Return the `route` array
     return route;
+  }
+
+  function getAmountOut(uint _amount, address[] calldata route) public view returns (uint) {
+    return _amount * 2;
   }
 
   // Swap one token for another using the Uniswap v3 router

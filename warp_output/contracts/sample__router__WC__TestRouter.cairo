@@ -10,6 +10,7 @@ from starkware.cairo.common.dict_access import DictAccess
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.default_dict import default_dict_new, default_dict_finalize
 from starkware.cairo.common.dict import dict_write
+from warplib.maths.mul import warp_mul256
 
 struct cd_dynarray_felt {
     len: felt,
@@ -40,19 +41,21 @@ func wm_to_calldata1{
     return ();
 }
 
-func WS0_READ_felt{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr: felt}(
-    loc: felt
-) -> (val: felt) {
-    alloc_locals;
-    let (read0) = WARP_STORAGE.read(loc);
-    return (read0,);
-}
-
 func WS_WRITE0{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr: felt}(
     loc: felt, value: felt
 ) -> (res: felt) {
     WARP_STORAGE.write(loc, value);
     return (value,);
+}
+
+func extern_input_check0{range_check_ptr: felt}(len: felt, ptr: felt*) -> () {
+    alloc_locals;
+    if (len == 0) {
+        return ();
+    }
+    warp_external_input_check_address(ptr[0]);
+    extern_input_check0(len=len - 1, ptr=ptr + 1);
+    return ();
 }
 
 // Contract Def TestRouter
@@ -127,48 +130,55 @@ func getPath_d88e3e3b{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_chec
         wm_write_felt(__warp_se_0, __warp_usrid_01__fromToken);
 
         let (__warp_se_1) = wm_index_dyn(
-            __warp_usrid_04_route, Uint256(low=1, high=0), Uint256(low=1, high=0)
-        );
-
-        let (__warp_se_2) = WS0_READ_felt(TestRouter.__warp_usrid_00_middleToken);
-
-        wm_write_felt(__warp_se_1, __warp_se_2);
-
-        let (__warp_se_3) = wm_index_dyn(
             __warp_usrid_04_route, Uint256(low=2, high=0), Uint256(low=1, high=0)
         );
 
-        wm_write_felt(__warp_se_3, __warp_usrid_02__toToken);
+        wm_write_felt(__warp_se_1, __warp_usrid_02__toToken);
 
-        let (__warp_se_4) = wm_to_calldata0(__warp_usrid_04_route);
+        let (__warp_se_2) = wm_to_calldata0(__warp_usrid_04_route);
 
         default_dict_finalize(warp_memory_start, warp_memory, 0);
 
-        return (__warp_se_4.len, __warp_se_4.ptr,);
+        return (__warp_se_2.len, __warp_se_2.ptr,);
     }
+}
+
+@view
+func getAmountOut_b8239ebb{syscall_ptr: felt*, range_check_ptr: felt}(
+    __warp_usrid_05__amount: Uint256, __warp_usrid_06_route_len: felt, __warp_usrid_06_route: felt*
+) -> (__warp_usrid_07_: Uint256) {
+    alloc_locals;
+
+    extern_input_check0(__warp_usrid_06_route_len, __warp_usrid_06_route);
+
+    warp_external_input_check_int256(__warp_usrid_05__amount);
+
+    let (__warp_se_3) = warp_mul256(__warp_usrid_05__amount, Uint256(low=2, high=0));
+
+    return (__warp_se_3,);
 }
 
 @external
 func swapTokenForToken_22894614{syscall_ptr: felt*, range_check_ptr: felt}(
-    __warp_usrid_05__fromToken: felt,
-    __warp_usrid_06__toToken: felt,
-    __warp_usrid_07__amountIn: Uint256,
-    __warp_usrid_08__to: felt,
-    __warp_usrid_09__maxSlippage: Uint256,
-) -> (__warp_usrid_10_: Uint256) {
+    __warp_usrid_08__fromToken: felt,
+    __warp_usrid_09__toToken: felt,
+    __warp_usrid_10__amountIn: Uint256,
+    __warp_usrid_11__to: felt,
+    __warp_usrid_12__maxSlippage: Uint256,
+) -> (__warp_usrid_13_: Uint256) {
     alloc_locals;
 
-    warp_external_input_check_int256(__warp_usrid_09__maxSlippage);
+    warp_external_input_check_int256(__warp_usrid_12__maxSlippage);
 
-    warp_external_input_check_address(__warp_usrid_08__to);
+    warp_external_input_check_address(__warp_usrid_11__to);
 
-    warp_external_input_check_int256(__warp_usrid_07__amountIn);
+    warp_external_input_check_int256(__warp_usrid_10__amountIn);
 
-    warp_external_input_check_address(__warp_usrid_06__toToken);
+    warp_external_input_check_address(__warp_usrid_09__toToken);
 
-    warp_external_input_check_address(__warp_usrid_05__fromToken);
+    warp_external_input_check_address(__warp_usrid_08__fromToken);
 
-    return (__warp_usrid_07__amountIn,);
+    return (__warp_usrid_10__amountIn,);
 }
 
 @constructor
@@ -183,4 +193,4 @@ func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr
     return ();
 }
 
-// Original soldity abi: ["constructor()","","getPath(address,address)","swapTokenForToken(address,address,uint256,address,uint256)"]
+// Original soldity abi: ["constructor()","","getPath(address,address)","getAmountOut(uint256,address[])","swapTokenForToken(address,address,uint256,address,uint256)"]

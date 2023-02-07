@@ -22,6 +22,10 @@ export default function SwapInput({
         value={value}
         disabled={disableInput}
         className="w-[80%] h-full text-5xl bg-inherit text-[#b8c0dc] border-none outline-none"
+        onChange={(e) =>
+          setValue && !isNaN(Number(e.target.value)) && setValue(e.target.value)
+        }
+        placeholder="0.0"
       />
       <Dropdown
         menu={{ items, selectable: true }}

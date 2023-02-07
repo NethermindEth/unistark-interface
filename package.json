@@ -11,6 +11,9 @@
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@nethermindeth/warp": "^2.4.6",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@starknet-react/core": "^0.14.8",
     "@typechain/ethers-v5": "^4.0.0",
     "@types/node": "18.11.9",
@@ -27,6 +30,7 @@
     "console": "^0.7.2",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
+    "fs": "^0.0.1-security",
     "hardhat": "^2.12.3",
     "hardhat-typechain": "^0.3.5",
     "hardhat-warp": "link:../hardhat-warp",

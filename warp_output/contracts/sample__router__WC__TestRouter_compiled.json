@@ -45,30 +45,55 @@
         {
             "inputs": [
                 {
-                    "name": "__warp_usrid_05__fromToken",
-                    "type": "felt"
-                },
-                {
-                    "name": "__warp_usrid_06__toToken",
-                    "type": "felt"
-                },
-                {
-                    "name": "__warp_usrid_07__amountIn",
+                    "name": "__warp_usrid_05__amount",
                     "type": "Uint256"
                 },
                 {
-                    "name": "__warp_usrid_08__to",
+                    "name": "__warp_usrid_06_route_len",
                     "type": "felt"
                 },
                 {
-                    "name": "__warp_usrid_09__maxSlippage",
+                    "name": "__warp_usrid_06_route",
+                    "type": "felt*"
+                }
+            ],
+            "name": "getAmountOut_b8239ebb",
+            "outputs": [
+                {
+                    "name": "__warp_usrid_07_",
+                    "type": "Uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "name": "__warp_usrid_08__fromToken",
+                    "type": "felt"
+                },
+                {
+                    "name": "__warp_usrid_09__toToken",
+                    "type": "felt"
+                },
+                {
+                    "name": "__warp_usrid_10__amountIn",
+                    "type": "Uint256"
+                },
+                {
+                    "name": "__warp_usrid_11__to",
+                    "type": "felt"
+                },
+                {
+                    "name": "__warp_usrid_12__maxSlippage",
                     "type": "Uint256"
                 }
             ],
             "name": "swapTokenForToken_22894614",
             "outputs": [
                 {
-                    "name": "__warp_usrid_10_",
+                    "name": "__warp_usrid_13_",
                     "type": "Uint256"
                 }
             ],
@@ -84,18 +109,22 @@
     "entry_points_by_type": {
         "CONSTRUCTOR": [
             {
-                "offset": "0x4ea",
+                "offset": "0x520",
                 "selector": "0x28ffe4ff0f226a9107253e17a904099aa4f63a02a5621de0576e5aa71bc5194"
             }
         ],
         "EXTERNAL": [
             {
-                "offset": "0x488",
+                "offset": "0x480",
                 "selector": "0xab5cc2543f65914dd4c16c77b2dac6874c1ad85c60478e2530aeac41468f7d"
             },
             {
-                "offset": "0x4c2",
+                "offset": "0x4f8",
                 "selector": "0x1e604a015f9083a60aace763f558fce95152b9650480ccc2ac1d8fc64bad538"
+            },
+            {
+                "offset": "0x4b9",
+                "selector": "0x3ec3789a7afcccd0895c49064b664a4f15e4111932437dcba825693ec654d80"
             }
         ],
         "L1_HANDLER": []
@@ -957,20 +986,35 @@
             "0x1104800180018000",
             "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffff8",
             "0x208b7fff7fff7ffe",
+            "0x480a7ff97fff8000",
+            "0x480a7ffa7fff8000",
+            "0x480a7ffb7fff8000",
+            "0x480a7ffc7fff8000",
+            "0x480a7ffd7fff8000",
+            "0x1104800180018000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe72",
+            "0x400680017fff7ffe",
+            "0x0",
+            "0x400680017fff7fff",
+            "0x0",
+            "0x48127ffb7fff8000",
+            "0x48127ffb7fff8000",
+            "0x48127ffb7fff8000",
+            "0x208b7fff7fff7ffe",
             "0x40780017fff7fff",
             "0x2",
             "0x480a7ffc7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff30",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff21",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffccd",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcbe",
             "0x40137fff7fff8000",
             "0x480a7ffb7fff8000",
             "0x48127ffa7fff8000",
             "0x48127ffa7fff8000",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff0f",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff00",
             "0x40137fff7fff8001",
             "0x480a7ff97fff8000",
             "0x480a7ffa7fff8000",
@@ -997,7 +1041,7 @@
             "0x480a7ffa7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff08",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffef9",
             "0x400280007ffc7fff",
             "0x480a7ff77fff8000",
             "0x480a7ff87fff8000",
@@ -1012,34 +1056,42 @@
             "0x1104800180018000",
             "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffffe9",
             "0x208b7fff7fff7ffe",
-            "0x40780017fff7fff",
-            "0x0",
-            "0x480a7ffa7fff8000",
-            "0x480a7ffb7fff8000",
-            "0x480a7ffc7fff8000",
-            "0x480a7ffd7fff8000",
-            "0x1104800180018000",
-            "0x1a",
-            "0x208b7fff7fff7ffe",
             "0x480a7ff97fff8000",
             "0x480a7ffa7fff8000",
             "0x480a7ffb7fff8000",
             "0x480a7ffc7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x20",
+            "0x31",
             "0x480a7ffd7fff8000",
+            "0x208b7fff7fff7ffe",
+            "0x40780017fff7fff",
+            "0x0",
+            "0x20780017fff7ffc",
+            "0x4",
+            "0x480a7ffb7fff8000",
+            "0x208b7fff7fff7ffe",
+            "0x480a7ffb7fff8000",
+            "0x480280007ffd8000",
+            "0x1104800180018000",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff69",
+            "0x482680017ffc8000",
+            "0x800000000000011000000000000000000000000000000000000000000000000",
+            "0x482680017ffd8000",
+            "0x1",
+            "0x1104800180018000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffff3",
             "0x208b7fff7fff7ffe",
             "0x480a7ffb7fff8000",
             "0x480680017fff8000",
             "0x946ce9a8a9bd5167849fea8e51a79d9e8c47ece417cb43da84dc699e32c16a",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffc89",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffc72",
             "0x480a7ffc7fff8000",
             "0x48127ffe7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd05",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcee",
             "0x48127fe17fff8000",
             "0x48127ffd7fff8000",
             "0x48127ffd7fff8000",
@@ -1052,7 +1104,7 @@
             "0x480a7ffa7fff8000",
             "0x48127ffe7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd20",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd09",
             "0x48127ffe7fff8000",
             "0x48127ff57fff8000",
             "0x48127ff57fff8000",
@@ -1067,7 +1119,7 @@
             "0x48127ffe7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd19",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd02",
             "0x48127ff67fff8000",
             "0x48127ff67fff8000",
             "0x208b7fff7fff7ffe",
@@ -1084,7 +1136,7 @@
             "0x48127ffe7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd08",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcf1",
             "0x48127ff67fff8000",
             "0x48127ff67fff8000",
             "0x208b7fff7fff7ffe",
@@ -1100,7 +1152,7 @@
             "0x480a7ffb7fff8000",
             "0x48127ffe7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcf0",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcd9",
             "0x48127ffe7fff8000",
             "0x48127ff57fff8000",
             "0x48127ff57fff8000",
@@ -1114,7 +1166,7 @@
             "0x48127ffe7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcea",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffcd3",
             "0x48127ff67fff8000",
             "0x48127ff67fff8000",
             "0x208b7fff7fff7ffe",
@@ -1162,17 +1214,17 @@
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff75",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff64",
             "0x48127ffc7fff8000",
             "0x48127ffc7fff8000",
             "0x48127ffc7fff8000",
             "0x208b7fff7fff7ffe",
             "0x40780017fff7fff",
-            "0x9",
+            "0x6",
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff07",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffef0",
             "0x40137fff7fff8000",
             "0x400b80007fff8001",
             "0x480a80007fff8000",
@@ -1181,14 +1233,14 @@
             "0x480680017fff8000",
             "0x1",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd1f",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffd08",
             "0x480a7ffb7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffedd",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffec6",
             "0x480a7ffc7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffeda",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffec3",
             "0x48127fb47fff8000",
             "0x480680017fff8000",
             "0x3",
@@ -1199,11 +1251,7 @@
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe85",
-            "0x40137fff7fff8002",
-            "0x48127ffd7fff8000",
-            "0x48127ffd7fff8000",
-            "0x480a80027fff8000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe6e",
             "0x480680017fff8000",
             "0x0",
             "0x480680017fff8000",
@@ -1213,40 +1261,13 @@
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe49",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe36",
             "0x480a7ffc7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe3f",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe2c",
             "0x48127ff37fff8000",
             "0x48127ffd7fff8000",
-            "0x480a80027fff8000",
-            "0x480680017fff8000",
-            "0x1",
-            "0x480680017fff8000",
-            "0x0",
-            "0x480680017fff8000",
-            "0x1",
-            "0x480680017fff8000",
-            "0x0",
-            "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe39",
-            "0x40137fff7fff8003",
-            "0x40137ffe7fff8004",
-            "0x480a7ff97fff8000",
-            "0x480a7ffa7fff8000",
-            "0x48127ffb7fff8000",
-            "0x480680017fff8000",
-            "0x0",
-            "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff20",
-            "0x480a80047fff8000",
-            "0x480a80037fff8000",
-            "0x48127ffd7fff8000",
-            "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe24",
-            "0x48127ff27fff8000",
-            "0x48127ffd7fff8000",
-            "0x480a80027fff8000",
+            "0x48127e7b7fff8000",
             "0x480680017fff8000",
             "0x2",
             "0x480680017fff8000",
@@ -1256,33 +1277,33 @@
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe1e",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe26",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe14",
-            "0x48127e6b7fff8000",
-            "0x48127e6b7fff8000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe1c",
+            "0x480a7ff97fff8000",
+            "0x480a7ffa7fff8000",
             "0x48127ff17fff8000",
             "0x48127ffb7fff8000",
-            "0x480a80027fff8000",
+            "0x48127cf47fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffecd",
-            "0x40137ffe7fff8005",
-            "0x40137fff7fff8006",
-            "0x40137ffa7fff8007",
-            "0x40137ffb7fff8008",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffee4",
+            "0x40137ffe7fff8002",
+            "0x40137fff7fff8003",
+            "0x40137ffa7fff8004",
+            "0x40137ffb7fff8005",
             "0x48127ffc7fff8000",
             "0x480a80017fff8000",
             "0x48127ffb7fff8000",
             "0x480680017fff8000",
             "0x0",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffea1",
-            "0x480a80077fff8000",
-            "0x480a80087fff8000",
-            "0x48127ffb7fff8000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffea9",
+            "0x480a80047fff8000",
             "0x480a80057fff8000",
-            "0x480a80067fff8000",
+            "0x48127ffb7fff8000",
+            "0x480a80027fff8000",
+            "0x480a80037fff8000",
             "0x208b7fff7fff7ffe",
             "0x40780017fff7fff",
             "0x3",
@@ -1298,7 +1319,7 @@
             "0x480a7ffc7fff8000",
             "0x480a7ffb7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffb88",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffb90",
             "0x480a80017fff8000",
             "0x4829800080008002",
             "0x480a80007fff8000",
@@ -1314,7 +1335,7 @@
             "0x480280007ffd8000",
             "0x480280017ffd8000",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff6f",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff8e",
             "0x40137ffb7fff8000",
             "0x40137ffc7fff8001",
             "0x48127ffd7fff8000",
@@ -1328,24 +1349,86 @@
             "0x208b7fff7fff7ffe",
             "0x40780017fff7fff",
             "0x0",
+            "0x480a7ff97fff8000",
+            "0x480a7ffc7fff8000",
+            "0x480a7ffd7fff8000",
+            "0x1104800180018000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffee2",
+            "0x480a7ffa7fff8000",
+            "0x480a7ffb7fff8000",
+            "0x1104800180018000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe58",
+            "0x480a7ffa7fff8000",
+            "0x480a7ffb7fff8000",
+            "0x480680017fff8000",
+            "0x2",
+            "0x480680017fff8000",
+            "0x0",
+            "0x1104800180018000",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe87",
+            "0x480a7ff87fff8000",
+            "0x48127ffc7fff8000",
+            "0x48127ffc7fff8000",
+            "0x48127ffc7fff8000",
+            "0x208b7fff7fff7ffe",
+            "0x40780017fff7fff",
+            "0x1",
+            "0x4003800080007ffb",
+            "0x4003800180007ffc",
+            "0x4826800180008000",
+            "0x2",
+            "0x480a7ffd7fff8000",
+            "0x4828800080007ffe",
+            "0x480a80007fff8000",
+            "0x208b7fff7fff7ffe",
+            "0x480280027ffb8000",
+            "0x480280027ffd8000",
+            "0x400080007ffe7fff",
+            "0x482680017ffd8000",
+            "0x3",
+            "0x480280027ffd8000",
+            "0x48307fff7ffe8000",
+            "0x402a7ffd7ffc7fff",
+            "0x480280027ffb8000",
+            "0x480280007ffb8000",
+            "0x482480017ffe8000",
+            "0x1",
+            "0x480280007ffd8000",
+            "0x480280017ffd8000",
+            "0x480280027ffd8000",
+            "0x482680017ffd8000",
+            "0x3",
+            "0x1104800180018000",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffffce",
+            "0x48127ffd7fff8000",
+            "0x1104800180018000",
+            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffffe3",
+            "0x48127ff47fff8000",
+            "0x480280017ffb8000",
+            "0x48127ffb7fff8000",
+            "0x48127ffb7fff8000",
+            "0x48127ffb7fff8000",
+            "0x208b7fff7fff7ffe",
+            "0x40780017fff7fff",
+            "0x0",
             "0x480a7ff67fff8000",
             "0x480a7ffc7fff8000",
             "0x480a7ffd7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe54",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe1e",
             "0x480a7ffb7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe47",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe11",
             "0x480a7ff97fff8000",
             "0x480a7ffa7fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe4d",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe17",
             "0x480a7ff87fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe40",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe0a",
             "0x480a7ff77fff8000",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe3d",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffe07",
             "0x480a7ff57fff8000",
             "0x48127ffe7fff8000",
             "0x480a7ff97fff8000",
@@ -1392,11 +1475,11 @@
             "0x480680017fff8000",
             "0x1",
             "0x1104800180018000",
-            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffec6",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffea7",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff10",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffef1",
             "0x1104800180018000",
-            "0x800000000000010ffffffffffffffffffffffffffffffffffffffffffffff0b",
+            "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffeec",
             "0x48127ffb7fff8000",
             "0x48127ffb7fff8000",
             "0x48127ffb7fff8000",
@@ -2139,7 +2222,7 @@
                     }
                 }
             ],
-            "1141": [
+            "1133": [
                 {
                     "accessible_scopes": [
                         "__main__",
@@ -2157,7 +2240,25 @@
                     }
                 }
             ],
-            "1208": [
+            "1199": [
+                {
+                    "accessible_scopes": [
+                        "__main__",
+                        "__main__",
+                        "__wrappers__",
+                        "__wrappers__.getAmountOut_b8239ebb_encode_return"
+                    ],
+                    "code": "memory[ap] = segments.add()",
+                    "flow_tracking_data": {
+                        "ap_tracking": {
+                            "group": 84,
+                            "offset": 0
+                        },
+                        "reference_ids": {}
+                    }
+                }
+            ],
+            "1262": [
                 {
                     "accessible_scopes": [
                         "__main__",
@@ -2168,14 +2269,14 @@
                     "code": "memory[ap] = segments.add()",
                     "flow_tracking_data": {
                         "ap_tracking": {
-                            "group": 83,
+                            "group": 88,
                             "offset": 0
                         },
                         "reference_ids": {}
                     }
                 }
             ],
-            "1264": [
+            "1318": [
                 {
                     "accessible_scopes": [
                         "__main__",
@@ -2186,7 +2287,7 @@
                     "code": "memory[ap] = segments.add()",
                     "flow_tracking_data": {
                         "ap_tracking": {
-                            "group": 88,
+                            "group": 93,
                             "offset": 0
                         },
                         "reference_ids": {}
@@ -2228,7 +2329,7 @@
             },
             "__main__.TestRouter.__warp_constructor_0": {
                 "decorators": [],
-                "pc": 1006,
+                "pc": 1029,
                 "type": "function"
             },
             "__main__.TestRouter.__warp_constructor_0.Args": {
@@ -2253,7 +2354,7 @@
             },
             "__main__.TestRouter.__warp_init_TestRouter": {
                 "decorators": [],
-                "pc": 1009,
+                "pc": 1032,
                 "type": "function"
             },
             "__main__.TestRouter.__warp_init_TestRouter.Args": {
@@ -2326,7 +2427,7 @@
             },
             "__main__.WARP_NAMEGEN.addr": {
                 "decorators": [],
-                "pc": 945,
+                "pc": 968,
                 "type": "function"
             },
             "__main__.WARP_NAMEGEN.addr.Args": {
@@ -2368,7 +2469,7 @@
             },
             "__main__.WARP_NAMEGEN.read": {
                 "decorators": [],
-                "pc": 950,
+                "pc": 973,
                 "type": "function"
             },
             "__main__.WARP_NAMEGEN.read.Args": {
@@ -2414,7 +2515,7 @@
             },
             "__main__.WARP_NAMEGEN.write": {
                 "decorators": [],
-                "pc": 963,
+                "pc": 986,
                 "type": "function"
             },
             "__main__.WARP_NAMEGEN.write.Args": {
@@ -2484,7 +2585,7 @@
             },
             "__main__.WARP_STORAGE.addr": {
                 "decorators": [],
-                "pc": 887,
+                "pc": 910,
                 "type": "function"
             },
             "__main__.WARP_STORAGE.addr.Args": {
@@ -2531,7 +2632,7 @@
             },
             "__main__.WARP_STORAGE.read": {
                 "decorators": [],
-                "pc": 901,
+                "pc": 924,
                 "type": "function"
             },
             "__main__.WARP_STORAGE.read.Args": {
@@ -2582,7 +2683,7 @@
             },
             "__main__.WARP_STORAGE.write": {
                 "decorators": [],
-                "pc": 915,
+                "pc": 938,
                 "type": "function"
             },
             "__main__.WARP_STORAGE.write.Args": {
@@ -2656,7 +2757,7 @@
             },
             "__main__.WARP_USED_STORAGE.addr": {
                 "decorators": [],
-                "pc": 928,
+                "pc": 951,
                 "type": "function"
             },
             "__main__.WARP_USED_STORAGE.addr.Args": {
@@ -2706,7 +2807,7 @@
             },
             "__main__.WARP_USED_STORAGE.write": {
                 "decorators": [],
-                "pc": 933,
+                "pc": 956,
                 "type": "function"
             },
             "__main__.WARP_USED_STORAGE.write.Args": {
@@ -2747,52 +2848,9 @@
                 "type": "const",
                 "value": 0
             },
-            "__main__.WS0_READ_felt": {
-                "decorators": [],
-                "pc": 869,
-                "type": "function"
-            },
-            "__main__.WS0_READ_felt.Args": {
-                "full_name": "__main__.WS0_READ_felt.Args",
-                "members": {
-                    "loc": {
-                        "cairo_type": "felt",
-                        "offset": 0
-                    }
-                },
-                "size": 1,
-                "type": "struct"
-            },
-            "__main__.WS0_READ_felt.ImplicitArgs": {
-                "full_name": "__main__.WS0_READ_felt.ImplicitArgs",
-                "members": {
-                    "pedersen_ptr": {
-                        "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                        "offset": 1
-                    },
-                    "range_check_ptr": {
-                        "cairo_type": "felt",
-                        "offset": 2
-                    },
-                    "syscall_ptr": {
-                        "cairo_type": "felt*",
-                        "offset": 0
-                    }
-                },
-                "size": 3,
-                "type": "struct"
-            },
-            "__main__.WS0_READ_felt.Return": {
-                "cairo_type": "(val: felt)",
-                "type": "type_definition"
-            },
-            "__main__.WS0_READ_felt.SIZEOF_LOCALS": {
-                "type": "const",
-                "value": 0
-            },
             "__main__.WS_WRITE0": {
                 "decorators": [],
-                "pc": 878,
+                "pc": 884,
                 "type": "function"
             },
             "__main__.WS_WRITE0.Args": {
@@ -2860,7 +2918,7 @@
                 "decorators": [
                     "constructor"
                 ],
-                "pc": 1241,
+                "pc": 1295,
                 "type": "function"
             },
             "__main__.constructor.Args": {
@@ -2908,11 +2966,99 @@
                 "destination": "starkware.cairo.common.dict.dict_write",
                 "type": "alias"
             },
+            "__main__.extern_input_check0": {
+                "decorators": [],
+                "pc": 893,
+                "type": "function"
+            },
+            "__main__.extern_input_check0.Args": {
+                "full_name": "__main__.extern_input_check0.Args",
+                "members": {
+                    "len": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "ptr": {
+                        "cairo_type": "felt*",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "__main__.extern_input_check0.ImplicitArgs": {
+                "full_name": "__main__.extern_input_check0.ImplicitArgs",
+                "members": {
+                    "range_check_ptr": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "__main__.extern_input_check0.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.extern_input_check0.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.getAmountOut_b8239ebb": {
+                "decorators": [
+                    "view"
+                ],
+                "pc": 1175,
+                "type": "function"
+            },
+            "__main__.getAmountOut_b8239ebb.Args": {
+                "full_name": "__main__.getAmountOut_b8239ebb.Args",
+                "members": {
+                    "__warp_usrid_05__amount": {
+                        "cairo_type": "starkware.cairo.common.uint256.Uint256",
+                        "offset": 0
+                    },
+                    "__warp_usrid_06_route": {
+                        "cairo_type": "felt*",
+                        "offset": 3
+                    },
+                    "__warp_usrid_06_route_len": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    }
+                },
+                "size": 4,
+                "type": "struct"
+            },
+            "__main__.getAmountOut_b8239ebb.ImplicitArgs": {
+                "full_name": "__main__.getAmountOut_b8239ebb.ImplicitArgs",
+                "members": {
+                    "range_check_ptr": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "syscall_ptr": {
+                        "cairo_type": "felt*",
+                        "offset": 0
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "__main__.getAmountOut_b8239ebb.Return": {
+                "cairo_type": "(__warp_usrid_07_: starkware.cairo.common.uint256.Uint256)",
+                "type": "type_definition"
+            },
+            "__main__.getAmountOut_b8239ebb.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
             "__main__.getPath_d88e3e3b": {
                 "decorators": [
                     "view"
                 ],
-                "pc": 1024,
+                "pc": 1047,
                 "type": "function"
             },
             "__main__.getPath_d88e3e3b.Args": {
@@ -2955,7 +3101,7 @@
             },
             "__main__.getPath_d88e3e3b.SIZEOF_LOCALS": {
                 "type": "const",
-                "value": 9
+                "value": 6
             },
             "__main__.narrow_safe": {
                 "destination": "warplib.maths.utils.narrow_safe",
@@ -2963,7 +3109,7 @@
             },
             "__main__.readId": {
                 "decorators": [],
-                "pc": 975,
+                "pc": 998,
                 "type": "function"
             },
             "__main__.readId.Args": {
@@ -3008,29 +3154,29 @@
                 "decorators": [
                     "external"
                 ],
-                "pc": 1183,
+                "pc": 1237,
                 "type": "function"
             },
             "__main__.swapTokenForToken_22894614.Args": {
                 "full_name": "__main__.swapTokenForToken_22894614.Args",
                 "members": {
-                    "__warp_usrid_05__fromToken": {
+                    "__warp_usrid_08__fromToken": {
                         "cairo_type": "felt",
                         "offset": 0
                     },
-                    "__warp_usrid_06__toToken": {
+                    "__warp_usrid_09__toToken": {
                         "cairo_type": "felt",
                         "offset": 1
                     },
-                    "__warp_usrid_07__amountIn": {
+                    "__warp_usrid_10__amountIn": {
                         "cairo_type": "starkware.cairo.common.uint256.Uint256",
                         "offset": 2
                     },
-                    "__warp_usrid_08__to": {
+                    "__warp_usrid_11__to": {
                         "cairo_type": "felt",
                         "offset": 4
                     },
-                    "__warp_usrid_09__maxSlippage": {
+                    "__warp_usrid_12__maxSlippage": {
                         "cairo_type": "starkware.cairo.common.uint256.Uint256",
                         "offset": 5
                     }
@@ -3054,7 +3200,7 @@
                 "type": "struct"
             },
             "__main__.swapTokenForToken_22894614.Return": {
-                "cairo_type": "(__warp_usrid_10_: starkware.cairo.common.uint256.Uint256)",
+                "cairo_type": "(__warp_usrid_13_: starkware.cairo.common.uint256.Uint256)",
                 "type": "type_definition"
             },
             "__main__.swapTokenForToken_22894614.SIZEOF_LOCALS": {
@@ -3077,6 +3223,10 @@
                 "destination": "warplib.maths.external_input_check_ints.warp_external_input_check_int256",
                 "type": "alias"
             },
+            "__main__.warp_mul256": {
+                "destination": "warplib.maths.mul.warp_mul256",
+                "type": "alias"
+            },
             "__main__.wm_index_dyn": {
                 "destination": "warplib.memory.wm_index_dyn",
                 "type": "alias"
@@ -3095,7 +3245,7 @@
             },
             "__main__.wm_to_calldata0": {
                 "decorators": [],
-                "pc": 814,
+                "pc": 829,
                 "type": "function"
             },
             "__main__.wm_to_calldata0.Args": {
@@ -3142,7 +3292,7 @@
             },
             "__main__.wm_to_calldata1": {
                 "decorators": [],
-                "pc": 842,
+                "pc": 857,
                 "type": "function"
             },
             "__main__.wm_to_calldata1.Args": {
@@ -3203,7 +3353,7 @@
                 "decorators": [
                     "constructor"
                 ],
-                "pc": 1258,
+                "pc": 1312,
                 "type": "function"
             },
             "__wrappers__.constructor.Args": {
@@ -3234,11 +3384,80 @@
                 "destination": "starkware.cairo.common.memcpy.memcpy",
                 "type": "alias"
             },
+            "__wrappers__.getAmountOut_b8239ebb": {
+                "decorators": [
+                    "view"
+                ],
+                "pc": 1209,
+                "type": "function"
+            },
+            "__wrappers__.getAmountOut_b8239ebb.Args": {
+                "full_name": "__wrappers__.getAmountOut_b8239ebb.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__wrappers__.getAmountOut_b8239ebb.ImplicitArgs": {
+                "full_name": "__wrappers__.getAmountOut_b8239ebb.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__wrappers__.getAmountOut_b8239ebb.Return": {
+                "cairo_type": "(syscall_ptr: felt*, pedersen_ptr: felt, range_check_ptr: felt, size: felt, retdata: felt*)",
+                "type": "type_definition"
+            },
+            "__wrappers__.getAmountOut_b8239ebb.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__wrappers__.getAmountOut_b8239ebb.__wrapped_func": {
+                "destination": "__main__.getAmountOut_b8239ebb",
+                "type": "alias"
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return": {
+                "decorators": [],
+                "pc": 1199,
+                "type": "function"
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return.Args": {
+                "full_name": "__wrappers__.getAmountOut_b8239ebb_encode_return.Args",
+                "members": {
+                    "range_check_ptr": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "ret_value": {
+                        "cairo_type": "(__warp_usrid_07_: starkware.cairo.common.uint256.Uint256)",
+                        "offset": 0
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return.ImplicitArgs": {
+                "full_name": "__wrappers__.getAmountOut_b8239ebb_encode_return.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return.Return": {
+                "cairo_type": "(range_check_ptr: felt, data_len: felt, data: felt*)",
+                "type": "type_definition"
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 1
+            },
+            "__wrappers__.getAmountOut_b8239ebb_encode_return.memcpy": {
+                "destination": "starkware.cairo.common.memcpy.memcpy",
+                "type": "alias"
+            },
             "__wrappers__.getPath_d88e3e3b": {
                 "decorators": [
                     "view"
                 ],
-                "pc": 1160,
+                "pc": 1152,
                 "type": "function"
             },
             "__wrappers__.getPath_d88e3e3b.Args": {
@@ -3267,7 +3486,7 @@
             },
             "__wrappers__.getPath_d88e3e3b_encode_return": {
                 "decorators": [],
-                "pc": 1141,
+                "pc": 1133,
                 "type": "function"
             },
             "__wrappers__.getPath_d88e3e3b_encode_return.Args": {
@@ -3307,7 +3526,7 @@
                 "decorators": [
                     "external"
                 ],
-                "pc": 1218,
+                "pc": 1272,
                 "type": "function"
             },
             "__wrappers__.swapTokenForToken_22894614.Args": {
@@ -3336,7 +3555,7 @@
             },
             "__wrappers__.swapTokenForToken_22894614_encode_return": {
                 "decorators": [],
-                "pc": 1208,
+                "pc": 1262,
                 "type": "function"
             },
             "__wrappers__.swapTokenForToken_22894614_encode_return.Args": {
@@ -3347,7 +3566,7 @@
                         "offset": 2
                     },
                     "ret_value": {
-                        "cairo_type": "(__warp_usrid_10_: starkware.cairo.common.uint256.Uint256)",
+                        "cairo_type": "(__warp_usrid_13_: starkware.cairo.common.uint256.Uint256)",
                         "offset": 0
                     }
                 },
@@ -6637,6 +6856,77 @@
                 "type": "type_definition"
             },
             "warplib.maths.external_input_check_ints.warp_external_input_check_int256.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "warplib.maths.ge.Uint256": {
+                "destination": "starkware.cairo.common.uint256.Uint256",
+                "type": "alias"
+            },
+            "warplib.maths.ge.is_le_felt": {
+                "destination": "starkware.cairo.common.math_cmp.is_le_felt",
+                "type": "alias"
+            },
+            "warplib.maths.ge.uint256_lt": {
+                "destination": "starkware.cairo.common.uint256.uint256_lt",
+                "type": "alias"
+            },
+            "warplib.maths.mul.Uint256": {
+                "destination": "starkware.cairo.common.uint256.Uint256",
+                "type": "alias"
+            },
+            "warplib.maths.mul.felt_to_uint256": {
+                "destination": "warplib.maths.utils.felt_to_uint256",
+                "type": "alias"
+            },
+            "warplib.maths.mul.is_le_felt": {
+                "destination": "starkware.cairo.common.math_cmp.is_le_felt",
+                "type": "alias"
+            },
+            "warplib.maths.mul.uint256_mul": {
+                "destination": "starkware.cairo.common.uint256.uint256_mul",
+                "type": "alias"
+            },
+            "warplib.maths.mul.warp_ge256": {
+                "destination": "warplib.maths.ge.warp_ge256",
+                "type": "alias"
+            },
+            "warplib.maths.mul.warp_mul256": {
+                "decorators": [],
+                "pc": 814,
+                "type": "function"
+            },
+            "warplib.maths.mul.warp_mul256.Args": {
+                "full_name": "warplib.maths.mul.warp_mul256.Args",
+                "members": {
+                    "lhs": {
+                        "cairo_type": "starkware.cairo.common.uint256.Uint256",
+                        "offset": 0
+                    },
+                    "rhs": {
+                        "cairo_type": "starkware.cairo.common.uint256.Uint256",
+                        "offset": 2
+                    }
+                },
+                "size": 4,
+                "type": "struct"
+            },
+            "warplib.maths.mul.warp_mul256.ImplicitArgs": {
+                "full_name": "warplib.maths.mul.warp_mul256.ImplicitArgs",
+                "members": {
+                    "range_check_ptr": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "warplib.maths.mul.warp_mul256.Return": {
+                "cairo_type": "(res: starkware.cairo.common.uint256.Uint256)",
+                "type": "type_definition"
+            },
+            "warplib.maths.mul.warp_mul256.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },

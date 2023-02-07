@@ -35,7 +35,7 @@ export const PageWrapper = styled.div`
 //   return contract;
 // }
 const contract_address =
-  "0x0725c1a56579ba13fbbfd0b3bcd43eb3fd4342ce0dc838ae21adbb93117275a0";
+  "0x01253023a96803ab4757ece7fc7054f642de408b5614c1c08131ceaaa48b6536";
 
 export default function Home() {
   const { connect, available } = useConnectors();
